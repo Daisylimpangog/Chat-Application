@@ -6,4 +6,3 @@ Limpangog Daisy
 Suliano Lenner
 Ochavo Jeanne
 Manilyn Jumawan
-Jessie
