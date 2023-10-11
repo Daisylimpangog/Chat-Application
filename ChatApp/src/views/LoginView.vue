@@ -1,137 +1,139 @@
 <template>
-  <form>
-    <div class="container">
-      <h1>LOG IN!</h1>
-      <p>Fill the form below to <strong>Log In</strong></p>
-      <hr style="border: 1px solid #999" />
-
-      <div class="form-group">
-        <input
-          class="form-control"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter Your Email *"
-          autocomplete="off"
-          spellcheck="false"
-          required
-        />
-        <label for="email">Email Address</label>
-      </div>
-
-      <div class="form-group">
-        <input
-          class="form-control"
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter Your Password *"
-          autocomplete="off"
-          spellcheck="false"
-          required
-        />
-        <label for="password">Password</label>
-      </div>
-
-      <hr style="border: 1px solid #999; margin-top: 0.8rem" />
-      <input class="btn" type="submit" name="submit" value="LOG IN" />
-    </div>
-  </form>
+  <div class="form">
+    <h1 style="text-align: center">Log In</h1>
+    <form action="" method="post" name="login">
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        required
+      /><br />
+      <input type="password" name="password" placeholder="Password" required />
+      <br />
+      <input name="submit" type="submit" value="Login" />
+    </form>
+    <p>Not registered yet? <a href="Registration">Register Here</a></p>
+  </div>
 </template>
 
 <style scope>
 body {
-  background: #9b9ce0;
-  background: -webkit-radial-gradient(circle, #9b9ce0 0%, #8c2cc4 100%);
-  background: radial-gradient(circle, #9b9ce0 0%, #8c2cc4 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(115, 23, 172, 0.7091211484593838) 36%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
-/* Apply a reset to remove default browser styles */
-body,
-h1,
-p,
-form,
-input,
-hr {
-  margin: 0;
-  padding: 0;
+.logo {
+  max-width: 100px; /* Set the maximum width for the logo */
+  margin: 0 auto; /* Center the logo horizontally */
+  display: block; /* Ensure it's a block element for proper alignment */
 }
 
-/* Apply styles to the container */
-.container {
-  max-width: 460px;
-  margin: 0 auto;
+.login {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: floralwhite;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.275);
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Style the header */
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  padding: 1px;
-  border: 1px;
+textarea:hover {
+  background-color: transparent;
+  border: transparent;
+  text-decoration: none;
 }
 
-/* Style the paragraph */
+a {
+  color: solid blue;
+  text-decoration: underline;
+}
 p {
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+  padding: 45px;
+  text-align: center;
 }
 
-/* Style the form-group */
-.form-group {
-  margin-bottom: 20px;
-  width: 90%;
-}
-
-/* Style the input fields */
-.form-control {
-  width: 100%;
+.form {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(134, 5, 116, 0.7091211484593838) 46%,
+    rgba(0, 212, 255, 1) 100%
+  );
   padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  width: 450px;
+  height: 380px;
+  margin: 280px auto;
+  border: 1px solid gray;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 4px 3px 3px 3px;
+}
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  height: 30px;
+  width: 400px;
+  border-radius: 4px;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  margin-top: 10px;
+  align-items: center;
+  box-shadow: 3px 5px;
 }
 
-/* Style the labels */
-label {
-  display: block;
-  font-weight: bold;
-}
-
-/* Style the horizontal rule */
-hr {
-  border: 1px solid #999;
-  margin-top: 0.8rem;
-  margin-bottom: 20px;
-}
-
-/* Style the submit button */
-.btn {
-  background-color: #007bff;
+input[type="submit"] {
+  padding: 10px 25px 8px;
   color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  font-size: 18px;
+  background-color: #c7b52b;
+  text-shadow: rgba(231, 208, 58, 0.24) 0 1px 0;
+  font-size: 16px;
+  box-shadow: rgba(231, 208, 58, 0.24) 0 2px 0 0 inset, #fff 0 1px 0 0;
+  border: 1px solid #e7d03a;
+  border-radius: 4px;
+  margin-top: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  height: 50px;
+  width: 100px;
+}
+input[type="submit"]:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(134, 5, 116, 0.7091211484593838) 46%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
-.btn:hover {
-  background-color: #0056b3;
+button[type="submit"] {
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
 }
 
-/* Apply styles to form elements on focus */
-.form-control:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+button[type="submit"]:hover {
+  color: blue;
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
 }
 </style>
