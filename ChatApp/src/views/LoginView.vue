@@ -10,11 +10,12 @@
         <br>
         <button type="submit">Login</button>
     </form>
-</div>
+    <p>Not registered yet? <a href="Registration">Register Here</a></p>
+  </div>
 </template>
 
 <style scope>
-div
+/* div
 {
     background: #474bff;
     background: -webkit-linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
@@ -24,7 +25,7 @@ div
     box-shadow: -1px -6px 12px -0.5px white;
     
 
-}
+} */
 form {
     
     background: rgba(255,255,255,0.35);
