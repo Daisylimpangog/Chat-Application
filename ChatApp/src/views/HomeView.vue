@@ -60,7 +60,6 @@
                                     <img src="../assets/profile.png" alt="">
                                     <span>Manilyn</span>
                                 </div>
-                             
                             </div>
                         </div>
                     </div>
@@ -71,14 +70,87 @@
                                 <span>Jeanee</span>
                             </div>
                             <div class="option">
-                                !
+                                <img src="../assets/exclamation-mark.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                <div class="user1">
+                                    asd
+                                </div>
+                                <div class="user2">
+                                    asd
+                                </div>
+                            </div>
+                            <div class="send-message">
+                                <div class="send-message-wrapper">
+                                    <input id="message-input" type="text">
+                                    <img id="send-icon" src="../assets/send-icon.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                </div>
             </div>
             <div class="profile-overview">
-
+                    <div class="user-profile">
+                        <img src="../assets/profile.png" alt="">
+                        <span>DAISY</span>
+                    </div>
+                    <div class="personalities">
+                       <div class="personalities-container">
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                            <div>
+                                <span>sporty</span>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="bio">
+                         <div>
+                            <span>Bio</span>
+                            <p>asdasd</p>
+                         </div>
+                    </div>
+                    <div class="buttons">
+                        <button>Add Chat</button>
+                        <button>Blocked</button>
+                    </div>
+               
             </div>
         </div>
     </div>
@@ -129,7 +201,8 @@
 .profile-overview{
     width: 30%;
     border: 2px solid white;
- 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr .3fr;
 }
 .chat-container{
     display: flex;
@@ -144,6 +217,8 @@
 .chat-box{
     width: 70%;
     border: 2px solid white;
+    display: grid;
+    grid-template-rows: .1fr 1fr;
 }
 .chat-wrapper{
     width: auto;
@@ -195,17 +270,74 @@
     border: 2px solid white;
     display: flex;
     justify-content: space-between;
-    
     padding: 5px;
 }
 .chat-profile,.option{
     display: flex;
     align-items: center;
 }
-.option{
+/* .option{
+
+} */
+.message-wrapper{
+    margin: 10px;
     border: 2px solid white;
-    padding: 15px;
-    font-size: 30px;
-	border-radius: 9999px;
+    display: grid;
+    grid-template-rows:  1fr .2fr;
 }
-</style>
+.message-content,.send-message{
+    margin: 5px;
+    border: 2px solid white;
+    
+}
+.message-content{
+    height: 100%;
+    overflow-y: auto;
+}
+.user1,.user2{
+    display: flex;
+    align-self: flex-end;
+}
+.send-message-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    border: 2px solid white;
+}
+#message-input{
+    width: 700px;
+    height: 50px;
+    border: 2px solid white;
+}
+#send-icon{
+    width: 50px;
+    height: 50px;
+}
+.user-profile,.personalities,.bio,.buttons{
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+}
+.user-profile{
+    flex-direction: column;
+    align-items: center;
+}
+.user-profile img{
+    width: 50px;
+    height: 50px;
+}
+
+.personalities-container{
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    margin: 10px;
+    overflow: auto
+}
+.personalities span{
+    border: 2px solid white;
+    margin-left: 10px;
+}
+</style> 
