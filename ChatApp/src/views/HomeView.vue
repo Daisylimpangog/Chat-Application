@@ -157,7 +157,7 @@
 .container {
   background: #9452ff;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 h1 {
   color: black;
@@ -166,8 +166,6 @@ h1 {
 .header {
   display: flex;
   justify-content: space-between;
-
-  border: 2px solid white;
 }
 .logo1 img {
   width: 130px;
@@ -184,20 +182,23 @@ h1 {
   width: 50px;
 }
 .content-wrapper {
-  width: 100%;
-  border: 2px solid white;
+  width: 99%;
+  border-radius: 20px;
   display: flex;
   background: white;
 }
 .message-box {
   width: 70%;
-  border: 2px solid white;
+  border-radius: 20px;
 }
 .profile-overview {
-  width: 30%;
-  border: 2px solid white;
+  width: 29%;
+  border-radius: 20px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 0.3fr;
+  background: #9452ff;
+  height: 615px;
+  padding: 2px;
 }
 h2 {
   color: black;
@@ -219,14 +220,14 @@ h2 {
   display: grid;
   grid-template-rows: 0.1fr 1fr;
   background: #9452ff;
-  border-radius: 7px;
+  border-radius: 20px;
 }
 .chat-wrapper {
   width: auto;
   display: flex;
   flex-direction: column;
   background: #9452ff;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .chat-wrapper input {
   width: 100%;
@@ -319,7 +320,8 @@ h2 {
 #message-input {
   width: 700px;
   height: 30px;
-  border: 4px solid white;
+  border-radius: 30px;
+  background: white;
 }
 #send-icon {
   width: 50px;
@@ -331,15 +333,16 @@ h2 {
 .buttons {
   display: flex;
   justify-content: center;
-  border: 2px solid white;
+  border-radius: 20px;
 }
 .user-profile {
   flex-direction: column;
   align-items: center;
+  border-radius: 20px;
 }
 .user-profile img {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
 }
 
 .personalities-container {
