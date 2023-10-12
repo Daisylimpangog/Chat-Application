@@ -2,85 +2,108 @@
   <div class="form">
     <h1>Register Here!!</h1>
     <form name="registration" action="" method="post">
+      <input type="text" name="Fullname" placeholder="Fullname" required />
       <input type="text" name="username" placeholder="username" required />
       <input type="Email" name="Email" placeholder="Email" required />
       <input type="password" name="password" placeholder="Password" required />
-      <input type="submit" name="submit" value="Click me to Register" />
+
+      <div class="birthday-input">
+        <label for="birthday">Birthday:</label>
+        <input type="date" name="birthday" id="birthday" required />
+      </div>
+      <br />
+      <div class="genderlabel">
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="male" id="male" required />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female" required />
+        <label for="female">Female</label>
+      </div>
+      <input type="submit" name="submit" value="Register" />
     </form>
   </div>
 </template>
 
 <style scope>
-
-.image {
-  filter: blur(2px);
-  -webkit-filter: blur(3px);
-  height: 728px;
-  width: 1520px;
-  object-fit: cover;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.birthday-input {
+  position: relative;
+  color: black;
+  font-size: 20px;
 }
 
-.login {
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
-  color: floralwhite;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
+.genderlabel {
+  color: black;
+  font-size: 20px;
 }
-
-a {
-  color: white;
-  text-decoration: underline;
-}
-
 .form {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(115, 23, 172, 0.7091211484593838) 36%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: gray;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-}
-
-input {
-  width: 200px;
-  background: transparent;
-  border: transparent;
-  border-bottom: whitesmoke 1px solid;
-  padding: 10px;
-  color: gainsboro;
-  font-size: 14px;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-::placeholder {
-  color: wheat;
-  opacity: 1;
   text-align: center;
+  width: 500px;
+  height: 440px;
+  box-shadow: 4px 3px 3px 3px;
 }
 
-input[type="submit"] {
-  padding: 10px 25px 8px;
+.form h1 {
+  font-size: 35px;
+  margin: 0 0 20px;
+  color: white;
+}
+
+/* Style form inputs */
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Style radio button container */
+.form div {
+  text-align: left;
+}
+
+/* Style radio buttons and labels */
+.form input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Style labels associated with radio buttons */
+.form label[for="male"],
+.form label[for="female"] {
+  font-weight: normal;
+}
+
+.form label[for="male"]::before,
+.form label[for="female"]::before {
+  content: "\00a0\00a0\00a0";
+  color: black;
+}
+
+/* Style the submit button */
+.form input[type="submit"] {
+  background-color: #ff6f61;
   color: #fff;
-  background-color: maroon;
-  text-shadow: rgba(231, 208, 58, 0.24) 0 1px 0;
-  font-size: 16px;
-  box-shadow: rgba(231, 208, 58, 0.24) 0 2px 0 0 inset, #fff 0 1px 0 0;
-  border: 1px solid #e7d03a;
-  border-radius: 2px;
-  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover {
-  background-color: f0df74;
+.form input[type="submit"]:hover {
+  background-color: green;
 }
 </style>
