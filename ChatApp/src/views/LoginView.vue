@@ -100,7 +100,9 @@ input[type="text"] {
 input[type="submit"] {
   padding: 10px 25px 8px;
   color: #fff;
-  background-color: #c7b52b;
+
+  background-color: #aa980e;
+
   text-shadow: rgba(231, 208, 58, 0.24) 0 1px 0;
   font-size: 16px;
   box-shadow: rgba(231, 208, 58, 0.24) 0 2px 0 0 inset, #fff 0 1px 0 0;
