@@ -20,7 +20,7 @@ const routes = [
             component: RegisterView,
         },
         {
-            path: '/Test',
+            path: '/test',
             name: 'Test',
             component: TestView,
         }
