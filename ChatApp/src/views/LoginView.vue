@@ -138,4 +138,24 @@ button[type="submit"]:hover {
   list-style-type: none;
   padding: 0;
 }
+.profile-overview
+{
+  max-height: 550px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
+#message-input
+{
+  max-width: 480px;
+  
+}
+.chat-profile span
+{
+   position: absolute;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15px;
+   margin-left: 10px;
+}
 </style>

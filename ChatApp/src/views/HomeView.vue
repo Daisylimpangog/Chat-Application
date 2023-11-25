@@ -81,7 +81,7 @@
               <div class="send-message">
                 <div class="send-message-wrapper">
                   <input id="message-input" type="text" />
-                  <img id="send-icon" src="../assets/send-icon.png" alt="" />
+                  <img class="send" id="send-icon" src="../assets/send-icon.png" alt="" />
                 </div>
               </div>
             </div>
@@ -143,8 +143,8 @@
           </div>
         </div>
         <div class="buttons">
-          <button>Add Chat</button>
-          <button>Blocked</button>
+          <button class="add">Add Chat</button>
+          <button class="block">Blocked</button>
         </div>
       </div>
     </div>
@@ -330,7 +330,8 @@ h2 {
 .user-profile,
 .personalities,
 .bio,
-.buttons {
+.buttons
+ {
   display: flex;
   justify-content: center;
   border-radius: 20px;
@@ -357,4 +358,35 @@ h2 {
   border: 2px solid white;
   margin-left: 10px;
 }
+.add
+{
+  background-color: #0000ff99;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+
+  margin-right: 5px;
+
+}
+.add:hover
+{
+  background-color: violet;
+  
+}
+.block
+{
+  background-color: #7c0505;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+
+  margin-right: 5px;
+
+}
+.block:hover
+{
+  background-color: violet;
+  
+}
+
 </style>
