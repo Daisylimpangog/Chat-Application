@@ -66,12 +66,17 @@
 
   }
   .image-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Optional: Add additional styles for the container */
+  height: 70vh; /* Set a height for vertical centering */
 }
 
 .image-container img {
   /* Optional: Add additional styles for the image */
-  display: inline-block;
+  display: block;
+  /* If you want to center vertically within the container, you can use margin-top: auto; and margin-bottom: auto; */
 }
 
 
