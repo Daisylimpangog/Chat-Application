@@ -5,7 +5,7 @@
       <input type="text" name="username" placeholder="username" required />
       <input type="Email" name="Email" placeholder="Email" required />
       <input type="password" name="password" placeholder="Password" required />
-      <input type="submit" name="submit" value="Click me to Register" />
+      <input type="submit" name="submit" href="stepView.vue" value="Click me to Register" />
     </form>
   </div>
 </template>

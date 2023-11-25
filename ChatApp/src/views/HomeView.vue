@@ -371,7 +371,7 @@ h2 {
 .add:hover
 {
   background-color: violet;
-  
+  color: blue;
 }
 .block
 {
@@ -379,14 +379,13 @@ h2 {
   border-radius: 5px;
   height: 30px;
   padding: 5px;
-
   margin-right: 6px;
 
 }
 .block:hover
 {
   background-color: violet;
-  
+  color: #7c0505;
 }
 
 </style>

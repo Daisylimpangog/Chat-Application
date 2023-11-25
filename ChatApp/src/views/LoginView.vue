@@ -12,7 +12,7 @@
       <br />
       <input name="submit" type="submit" value="Login" />
     </form>
-    <p>Not registered yet? <a href="Registration">Register Here</a></p>
+    <p>Not registered yet? <a href="/register">Register Here</a></p>
   </div>
 </template>
 
