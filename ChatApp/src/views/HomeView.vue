@@ -380,7 +380,7 @@ h2 {
   height: 30px;
   padding: 5px;
 
-  margin-right: 5px;
+  margin-right: 6px;
 
 }
 .block:hover
