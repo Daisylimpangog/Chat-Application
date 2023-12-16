@@ -22,9 +22,10 @@
             <img class="boxed-image" src="../assets/profile.png" alt="" />
             <img class="boxed-image" src="../assets/profile.png" alt="" />
         </div>
-        <div class="btn">
-            <button class="cancel">CANCEL</button>
-            <button class="next">NEXT</button>
+        <br>
+        <div>
+            <button class="btn1"><a href="/login">Cancel</a></button>
+            <button class="btn2"><a href="/">Proceed</a></button>
         </div>
         </div>
         
@@ -36,7 +37,7 @@
   
   <script setup></script>
   
-  <style scoped>
+  <style scope>
   .container {
     background: #9452ff;
     padding: 20px;
@@ -114,31 +115,25 @@
       display: block; /* Remove extra space below the image */
     }
     
-   .cancel
-   {
+   .btn1{
+    margin-left: 26.8rem;
+    margin-right: 1rem;
     background-color: gray;
+    color: #fff;
+    padding: 10px 20px ;
+    border: none;
     border-radius: 5px;
-    height: 2rem;
-    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
    }
-   .cancel:hover {
-    background-color: coral;
-    color: white;
-   }
-   .next
-   {
-    background-color: green;
+   .btn2{
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    height: 2rem;
-    width: 4.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
    }
-   .next:hover {
-    background-color: blue;
-    color: white;
-   }
-  .btn{
-    margin-left: 21.5rem;
-    margin-top: 2rem;
-  }
   </style>
   

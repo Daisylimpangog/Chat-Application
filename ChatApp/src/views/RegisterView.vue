@@ -19,7 +19,8 @@
         <input type="radio" name="gender" value="female" id="female" required />
         <label for="female">Female</label>
       </div>
-      <input type="submit" name="submit" value="Register" />
+      <br>
+      <button><a href="/step1">Register</a></button>
     </form>
   </div>
 </template>
@@ -93,7 +94,8 @@
 }
 
 /* Style the submit button */
-.form input[type="submit"] {
+button {
+  margin-top: 5px;
   background-color: #ff6f61;
   color: #fff;
   padding: 10px 20px;
@@ -102,8 +104,12 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+button a{
+  text-decoration: none;
+  color: white;
+}
+button:hover{
+  background-color: blue;
 
-.form input[type="submit"]:hover {
-  background-color: green;
 }
 </style>
