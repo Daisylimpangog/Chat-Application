@@ -20,9 +20,9 @@ const routes = [
         },
 
         {
-            path: '/step1',
-            name: 'step1',
-            component: step1View,
+            path: '/test',
+            name: 'Test',
+            component: TestView,
         }
     
     ]
