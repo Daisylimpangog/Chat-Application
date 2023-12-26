@@ -1,20 +1,70 @@
 <template>
   <div class="form">
     <h1 style="text-align: center">Log In</h1>
-    <form action="" method="post" name="login">
+    <form  name="login" @submit.prevent="handleSubmit" >
       <input
+        v-model="email"
         type="text"
         name="username"
-        placeholder="Username"
+        placeholder="Email"
         required
       /><br />
-      <input type="password" name="password" placeholder="Password" required />
+      <input v-model="password" type="password" name="password" placeholder="Password" required autocomplete="on" />
       <br />
-      <input name="submit" type="submit" value="Login" />
+      <input name="submit" type="submit" />
     </form>
-    <p>Not registered yet? <a href="/register">Register Here</a></p>
+    <p>Not registered yet? <router-link :to="{name:'register'}">Register Here</router-link></p>
   </div>
 </template>
+
+<script  setup>
+import { useAuthStore } from '../stores/auth';
+import { ref } from 'vue'
+import { useRouter } from "vue-router";
+
+
+
+const router = useRouter()
+const store = useAuthStore()
+
+const email = ref('') 
+const password = ref('') 
+
+const handleSubmit = async()=>{
+  if(validateInputs()){
+    alert('Please input the username and password')
+    return;
+  }
+  const credentials = {
+    email: email.value,
+    password: password.value
+  }
+
+  await store.loginAccoount(credentials)
+  if(store.isSuccess){
+    alert("Successfully Logged in")
+    router.push({name:'home'})
+  }else{
+    alert("Something went wrong")
+  }
+}
+
+const validateInputs = ()=>{
+  let isError = false
+
+  if(email.value == ''){
+    isError = true
+  }
+  if(password.value == ''){
+    isError = true
+  }
+
+
+  return isError
+}
+
+</script>
+
 
 <style scope>
 body {
