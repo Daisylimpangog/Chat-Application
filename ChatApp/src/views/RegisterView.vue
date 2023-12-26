@@ -1,39 +1,126 @@
 <template>
   <div class="form">
     <h1>Register Here!!</h1>
-    <form name="registration" action="" method="post">
-      <input type="text" name="Fullname" placeholder="Fullname" required />
-      <input type="text" name="username" placeholder="username" required />
-      <input type="Email" name="Email" placeholder="Email" required />
-      <input type="password" name="password" placeholder="Password" required />
+    <form name="registration" >
+      <input v-model="fullname" type="text" name="Fullname" placeholder="Fullname"  autocomplete="on"/>
+      <input v-model="username" type="text" name="username" placeholder="username"  autocomplete="on"/>
+      <input v-model="email" type="Email" name="Email" placeholder="Email"  autocomplete="on"/>
+      <input v-model="password" type="password" name="password" placeholder="Password"  autocomplete="on"/>
 
       <div class="birthday-input">
-        <label for="birthday">Birthday:</label>
-        <input type="date" name="birthday" id="birthday" required />
+        <label  for="birthday">Birthday:</label>
+        <input v-model="birthday" type="date" name="birthday" id="birthday"  />
       </div>
       <br />
       <div class="genderlabel">
-        <label for="gender">Gender:</label>
-        <input type="radio" name="gender" value="male" id="male" required />
+        <span for="gender-male">Gender:</span>
+        <input v-model="gender" type="radio" name="gender" value="male" id="male"  />
         <label for="male">Male</label>
-        <input type="radio" name="gender" value="female" id="female" required />
-        <label for="female">Female</label>
+        <input  v-model="gender" type="radio" name="gender" value="female" id="gender-female"  />
+        <label for="gender-female">Female</label>
       </div>
       <br>
-      <button><a href="/step1">Register</a></button>
     </form>
+    <div class="buttons">
+ 
+        <router-link to="/login"><span>Back</span></router-link>
+       <button @click="handleSubmit">Register</button>
+      </div>
   </div>
 </template>
 
+<script setup>
+import {ref} from 'vue'
+import { useAuthStore } from '../stores/auth';
+import { useRouter } from "vue-router";
+
+const router = useRouter()
+const store = useAuthStore()
+
+// register
+
+const fullname = ref('')
+const username = ref('')
+const email = ref('')
+const password = ref('')
+const birthday = ref('')
+const gender = ref('')
+
+
+
+const handleSubmit = async()=>{
+
+  if(valudateInputs()){
+
+    alert('Please provide credentials')
+    return;
+  }
+
+  const credentials = {
+    user_name:username.value,
+    fullname:fullname.value,
+    email:email.value,
+    password:password.value,
+    birthday:birthday.value,
+    gender:gender.value
+  }
+
+  await store.registerAccount(credentials)
+  if(store.isSuccess){
+    alert('Successfully Registered!')
+    router.push({name:'login'})
+  }else{
+    alert('Something went wrong')
+  }
+}
+
+const valudateInputs = ()=>{
+  let isError = false
+
+  if(fullname.value == ''){
+    isError = true
+  }
+  if(username.value == ''){
+    isError = true
+  }
+  if(email.value == ''){
+    isError = true
+  }
+  if(password.value == ''){
+    isError = true
+  }
+  if(birthday.value == ''){
+    isError = true
+  }
+  if(gender.value == ''){
+    isError = true
+  }
+
+
+
+  return isError
+}
+
+</script>
+
+
+
+
 <style scope>
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 .birthday-input {
   position: relative;
-  color: black;
+  color: white;
   font-size: 20px;
 }
 
 .genderlabel {
-  color: black;
+  color: white;
   font-size: 20px;
 }
 .form {
@@ -94,7 +181,7 @@
 }
 
 /* Style the submit button */
-button {
+a,button {
   margin-top: 5px;
   background-color: #ff6f61;
   color: #fff;
@@ -104,11 +191,11 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-button a{
+ span{
   text-decoration: none;
   color: white;
 }
-button:hover{
+a:hover,button:hover{
   background-color: blue;
 
 }
